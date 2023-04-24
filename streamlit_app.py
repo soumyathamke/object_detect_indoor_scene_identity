@@ -21,3 +21,14 @@ with st.sidebar.expander("About the App"):
      st.write("""
         Use this simple app to find out details about the picture taken .  \n  \nThis app was created by a group of students of vnrvjiet (soumya, abhay, sufiya, omega) . Hope you enjoy!
      """)  
+        
+        
+file_image = st.camera_input(label = "Take a pic of you to be sketched out")
+
+if file_image:
+    input_img = Image.open(file_image)
+    st.write("**Input Photo**")
+        st.image(input_img, use_column_width=True)
+        
+else:
+     st.write("You haven't uploaded any image file")        
