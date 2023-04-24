@@ -28,7 +28,7 @@ file_image = st.camera_input(label = "Take a pic of you to be sketched out")
 if file_image:
     input_img = Image.open(file_image)
     st.write("**Input Photo**")
-        st.image(input_img, use_column_width=True)
+    st.image(input_img, use_column_width=True)
         
 else:
      st.write("You haven't uploaded any image file")        
